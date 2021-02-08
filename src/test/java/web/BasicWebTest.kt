@@ -1,14 +1,18 @@
 package web
 
-import BasicTest
 import com.codeborne.selenide.Configuration
 import com.codeborne.selenide.Selenide
+import com.codeborne.selenide.junit.TextReport
 import com.codeborne.selenide.logevents.SelenideLogger
 import io.qameta.allure.selenide.AllureSelenide
 import org.junit.AfterClass
 import org.junit.BeforeClass
+import org.junit.Rule
 
-open class BasicWebTest : BasicTest() {
+open class BasicWebTest {
+
+    @Rule
+    public lateinit var report: TextReport
 
     companion object {
         @BeforeClass

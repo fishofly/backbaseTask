@@ -10,5 +10,5 @@
 
 Pom partially taken from https://github.com/allure-examples/allure-junit-example/blob/master/pom.xml
 
-* Run test - mvn clean test
+* Run test - mvn clean test -Dtestuser=... -Dtestpassword=...
 * See report  - mvn allure:serve
