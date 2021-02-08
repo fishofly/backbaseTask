@@ -5,5 +5,5 @@
 *.iml
 .allure
 .target
-out
-gen
+build
+target
