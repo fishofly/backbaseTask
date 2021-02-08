@@ -9,8 +9,8 @@
         <version>7</version>
     </parent>
 
-    <name>Automation Demo for a website</name>
-    <description>Allure, JUnit, Kotlin, Selenide Usage Example</description>
+    <name>Test setup for Backbase task</name>
+    <description>Tests for Midium.com-like website</description>
 
     <groupId>org.selenide.examples</groupId>
     <artifactId>selenide-allure-junit</artifactId>
