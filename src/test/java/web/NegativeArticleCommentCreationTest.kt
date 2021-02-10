@@ -34,6 +34,7 @@ class NegativeArticleCommentCreationTest() : BasicWebTest() {
             .login(testAccount!!.username, testAccount!!.password)
             .createTestArticle(articleTitle)
         createdArticleSteps.verifyNoPostCommentButton()
+        //expected fail, test can be annotated with @issue=some id (jira id for e.g.)
     }
 
     @After
