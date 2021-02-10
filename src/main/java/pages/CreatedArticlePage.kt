@@ -7,6 +7,7 @@ import com.codeborne.selenide.Selectors.*
 import com.codeborne.selenide.Selenide.element
 import com.codeborne.selenide.SelenideElement
 import io.qameta.allure.Step
+import org.openqa.selenium.Keys
 import kotlin.test.Asserter
 
 class CreatedArticlePage {
@@ -30,7 +31,8 @@ class CreatedArticlePage {
     @Step("Add comment {testComment}")
     fun addComment(testComment: String): CreatedArticlePage {
         commentField.shouldBe(Condition.visible).sendKeys(testComment)
-        submitButton.shouldBe(Condition.visible).click()
+        submitButton.shouldBe(Condition.visible).sendKeys(Keys.SHIFT)
+        submitButton.click()
         return this
     }
 

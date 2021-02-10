@@ -1,11 +1,12 @@
 package pages
 
 import com.codeborne.selenide.Condition
-import com.codeborne.selenide.Selectors.*
+import com.codeborne.selenide.Selectors.byAttribute
 import com.codeborne.selenide.Selenide.element
 import com.codeborne.selenide.SelenideElement
 import io.qameta.allure.Step
 import org.openqa.selenium.By
+import org.openqa.selenium.Keys
 
 class LoginPage {
     private val usernameInput: SelenideElement = element(byAttribute("placeholder", "Username"))
@@ -17,7 +18,8 @@ class LoginPage {
     fun performLogin(username: String, password: String): LoginPage {
         usernameInput.shouldBe(Condition.visible).setValue(username)
         passwordInput.shouldBe(Condition.visible).setValue(password)
-        submitButton.shouldBe(Condition.visible).click()
+        submitButton.shouldBe(Condition.visible).sendKeys(Keys.SHIFT)
+        submitButton.click()
         return this
     }
 
